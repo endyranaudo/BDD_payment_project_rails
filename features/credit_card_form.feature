@@ -1,10 +1,11 @@
 Feature: Credit Card Form
-  User types credit card details
+  User fills up a form with credit card details to purchase an item
 
-    Scenario: Scenario
-      Given the details prompted are correct
-      When I click the submit button
-      Then I am redirected to the Thank You page
+    Scenario: I enter the correct card details
+      Given I am on the payment page
+      When enter the correct card details
+      And I click the submit button
+      Then I should be redirected to the Thank You page
     
     # Scenario: Scenario
     #   Given the details prompted are incorrect
