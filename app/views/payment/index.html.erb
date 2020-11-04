@@ -1,0 +1,12 @@
+<h1>Payment</h1>
+
+<%= form_with do |f| %> 
+  <div>
+    <%= f.label :card_number %><br />
+    <%= f.text_field :card_number %>
+  </div>
+  <div>
+    <%= f.submit "Pay now" %>
+  </div>
+
+<% end %>
