@@ -1,7 +1,7 @@
 
 
 Given('I am on the payment page') do
-  visit "/payment"
+  visit "/payments"
 end
 
 When('enter the correct card details') do

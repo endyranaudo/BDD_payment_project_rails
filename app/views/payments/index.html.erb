@@ -1,12 +1,11 @@
 <h1>Payment</h1>
 
-<%= form_for :payment do |f| %> 
+<%= form_for @payment do |f| %> 
   <div>
     <%= f.label :card_number %><br />
-    <%= f.text_field :card_number, id:"card-number" %>
+    <%= f.text_field :card_number, id:"card-details" %>
   </div>
   <div>
     <%= f.submit "Pay now", id: "pay-now" %>
   </div>
-
 <% end %>

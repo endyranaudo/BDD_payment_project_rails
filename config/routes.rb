@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  root 'payment#index'
-  resources :payment
+  root 'payments#index'
+  
+  resources :payments do
+    get 'thank_you', to: 'payments#thank_you'
+  end
+  
 end
