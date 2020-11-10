@@ -7,10 +7,11 @@ Feature: Credit Card Form
       And I click the submit button
       Then I should be redirected to the Thank You page
     
-    # Scenario: Scenario
-    #   Given the details prompted are incorrect
-    #   When I click the submit button
-    #   Then an error message is rendered on the page
+    Scenario: Scenario
+      Given I am on the payment page
+      When enter the incorrect card details
+      And I click the submit button
+      Then an error message is rendered on the page
 
 # CONDITIONS
 # Credit card number must be 16 digits

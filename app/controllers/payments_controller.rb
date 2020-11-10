@@ -8,11 +8,18 @@ class PaymentsController < ApplicationController
     @payment = Payment.new
   end
 
+  def show
+    @payment = Payment.find(params[:id])
+  end
+
   def create 
-    @payment = Payment.new(payment_params)
-    if @payment.save
-      # byebug
+    if payment_params["card_number"].length == 16
+      @payment = Payment.new(payment_params)
+      @payment.save
       redirect_to payment_thank_you_url([:payment_id])
+    else
+      flash[:notice] = "Incorrect card details."
+      redirect_to payments_url
     end
   end
 

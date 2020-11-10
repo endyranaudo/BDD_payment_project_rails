@@ -8,4 +8,9 @@
   <div>
     <%= f.submit "Pay now", id: "pay-now" %>
   </div>
+  <% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
 <% end %>

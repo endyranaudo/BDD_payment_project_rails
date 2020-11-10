@@ -1,5 +1,3 @@
-
-
 Given('I am on the payment page') do
   visit "/payments"
 end
@@ -15,3 +13,4 @@ end
 Then('I should be redirected to the Thank You page') do
   expect(page).to have_content("Thank you!")
 end
+
