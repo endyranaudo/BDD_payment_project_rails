@@ -1,3 +1,4 @@
+#SCENARIO ONE
 Given('I am on the payment page') do
   visit "/payments"
 end
@@ -14,3 +15,11 @@ Then('I should be redirected to the Thank You page') do
   expect(page).to have_content("Thank you!")
 end
 
+# SCENARIO TWO
+When('enter the incorrect card details') do
+  fill_in "card-details",	with: "121222121" 
+end
+
+Then('an error message is rendered on the page') do
+  expect(page).to have_content("Incorrect card details.")
+end

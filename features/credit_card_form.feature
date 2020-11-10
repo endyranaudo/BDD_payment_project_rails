@@ -7,7 +7,7 @@ Feature: Credit Card Form
       And I click the submit button
       Then I should be redirected to the Thank You page
     
-    Scenario: Scenario
+    Scenario: I enter the incorrect card details
       Given I am on the payment page
       When enter the incorrect card details
       And I click the submit button
