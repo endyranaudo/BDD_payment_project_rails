@@ -16,7 +16,7 @@ Then('I should be redirected to the Thank You page') do
 end
 
 # SCENARIO TWO
-When('I do not enter 16 digits in the card number field') do
+When('I enter less or more than 16 digits in the card number field') do
   fill_in "card-details",	with: "123412341234123" 
 end
 

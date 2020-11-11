@@ -1,3 +1,8 @@
+# CONDITIONS
+# Credit card number must be 16 digits
+# Credit card field accepts only numbers
+# Submitting a blank form renders the error "Field cannot be blank"
+
 Feature: Credit Card Form
   User fills up a form with credit card details to purchase an item
 
@@ -7,9 +12,9 @@ Feature: Credit Card Form
       And I click the submit button
       Then I should be redirected to the Thank You page
     
-    Scenario: I do not enter 16 digits in the card number field
+    Scenario: I enter less or more than 16 digits in the card number field
       Given I am on the payment page
-      When I do not enter 16 digits in the card number field
+      When I enter less or more than 16 digits in the card number field
       And I click the submit button
       Then CARD NUMBER MUST BE 16 DIGITS error message is rendered on the page
     
@@ -25,7 +30,3 @@ Feature: Credit Card Form
       And I click the submit button
       Then FIELD CANNOT BE BLANK error message is rendered on the page
 
-# CONDITIONS
-# Credit card number must be 16 digits
-# Credit card field accepts only numbers
-# Submitting a blank form renders the error "Field cannot be blank"
